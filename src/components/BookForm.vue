@@ -21,19 +21,20 @@
         />
         <div>
             <input v-model="bookData.finishedReading" type="checkbox" />
-        </div>
-        <input
+            <label for="finishedReading">Finished Reading</label>
+            <input
             v-model="bookData.ownership"
             type="radio"
             value="borrowed"
-        />
-        <label for="borrowed">borrowed</label>
-        <input
-            v-model="bookData.ownership"
-            type="radio"
-            value="bought"
-        />
-        <label for="bought">bought</label>
+            />
+            <label for="borrowed">borrowed</label>
+            <input
+                v-model="bookData.ownership"
+                type="radio"
+                value="bought"
+            />
+            <label for="bought">bought</label>
+        </div>
         <button type="submit" name="button">Add Book</button>
     </form>
 </template>
@@ -48,7 +49,7 @@ export default {
                 bookTitle: '',
                 bookAuthor: '',
                 finishedReading: false,
-                ownershop: [],
+                ownership: [],
             },
         }
     },
